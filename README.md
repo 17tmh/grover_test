@@ -1,4 +1,4 @@
-# mdang_test
+# grover_test
 
 Powershell script for running the quantum search prototype.
 
