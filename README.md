@@ -23,7 +23,7 @@ cd grover_test
 .\grover_prototype.ps1
 ```
 
-- Since there is no file `init`, the initialization will run (download repos, generate data and populate MongoDB)
+- Since there is no file `init`, the initialization will run first (download repos, generate data and populate MongoDB)
 - Further calls of `.\grover_prototype.ps1` will only cause the quantum part to execute (with the already generated data in MongoDB)
 - `.\clean.ps1` removes everything (the file `init`, downloaded repos, docker container as well as the database in the Windows file system).
 
