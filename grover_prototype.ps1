@@ -12,7 +12,7 @@ if($?)
     git clone https://code.dbis-pro1.fernuni-hagen.de/qcdev/dlgrover.git
     git clone https://code.dbis-pro1.fernuni-hagen.de/data-preparation/data-generator.git
 
-    # Run Python script within WSL
+    # Run Python script within WSL to generate data
     cd $root\data-generator
     git checkout smart-factory-data
     wsl python3 ./scripts/generateSmartFactory.py 0.05

@@ -1,0 +1,16 @@
+-----------------------Get feature subset-------------------------
+[[1, 153], [2, 0], [3, 0], [4, 153], [5, 82], [6, 153], [7, 153], [8, 0]]
+
+
+------------------Initiate Quantum Search Module--------------------
+
+---------------Convert data to bitsequences----------------
+documentId 1: [True,False,False]
+{'text/plain': 'Unhandled exception. Microsoft.Quantum.Simulation.Core.ExecutionFailException: `number` must be between 0 and 2^3 - 1, but was 153.\r\n ---> QsharpCommunity.Qram.CreateQrom on C:\\Users\\haschkt\\home_local\\temp\\mdang_test\\dlgrover\\grover\\src\\qromMethods.qs:line 0\r\n   at QromSample.QuantumSearchService on C:\\Users\\haschkt\\home_local\\temp\\mdang_test\\dlgrover\\grover\\src\\quantumSearchService.qs:line 0\r\n', 'text/html': '\r\n                    <details>\r\n                        <summary>\r\n                            Unhandled exception of type Microsoft.Quantum.Simulation.Core.ExecutionFailException: `number` must be between 0 and 2^3 - 1, but was 153.\r\n                        </summary>\r\n                        <table>\r\n
+        \r\n                    <thead>\r\n                        <tr>\r\n                            <th>Source</th>\r\n                            <th>Callable</th>\r\n                        </tr>\r\n                    </thead>\r\n\r\n                    <tbody>\r\n                        \r\n                        <tr>\r\n                            <td><a href="C:\\Users\\haschkt\\home_local\\temp\\mdang_test\\dlgrover\\grover\\src\\qromMethods.qs">C:\\Users\\haschkt\\home_local\\temp\\mdang_test\\dlgrover\\grover\\src\\qromMethods.qs:0</a></td>\r\n                            <td>QsharpCommunity.Qram.CreateQrom</td>\r\n                        </tr>\r\n                    \n\r\n                        <tr>\r\n                            <td><a href="C:\\Users\\haschkt\\home_local\\temp\\mdang_test\\dlgrover\\grover\\src\\quantumSearchService.qs">C:\\Users\\haschkt\\home_local\\temp\\mdang_test\\dlgrover\\grover\\src\\quantumSearchService.qs:0</a></td>\r\n
+              <td>QromSample.QuantumSearchService</td>\r\n                        </tr>\r\n                    \r\n                    </tbody>\r\n                \r\n                        </table>\r\n                    </details>\r\n                '}
+`number` must be between 0 and 2^3 - 1, but was 153.
+
+
+---------------Retrieve document of found anomaly value-------------------
+None
