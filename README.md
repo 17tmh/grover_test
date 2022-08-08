@@ -18,8 +18,8 @@ Powershell script for running the quantum search prototype.
 - Before first run: Make sure there will be no conflicts with already existing docker containers.
 
 ```
-git clone https://github.com/17tmh/mdang_test.git
-cd mdang_test
+git clone https://github.com/17tmh/grover_test.git
+cd grover_test
 .\grover_prototype.ps1
 ```
 
