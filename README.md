@@ -7,8 +7,8 @@ Powershell script for running the quantum search prototype.
 - Windows 10 or 11
 - Powershell script execution must be enabled:
   - `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
-- WSL with python3, java, maven:
-- docker, docker-compose (most simple: docker-desktop for Windows)
+- WSL (Windows Subsystem for Linux) with `python3`, `java`, `maven`
+- `docker`, `docker-compose` (most simple: docker-desktop for Windows)
 - `py.exe`, the Python launcher for Windows, which must start a Python 3 interpreter
 - Anaconda 3 (installed in your home directory); create this environment:
   - `conda create -n qsharp-env -c microsoft qsharp notebook`
@@ -24,7 +24,7 @@ cd grover_test
 ```
 
 - Since there is no file `init`, the initialization will run first (download repos, generate data and populate MongoDB)
-- Further calls of `.\grover_prototype.ps1` will only cause the quantum part to execute (with the already generated data in MongoDB)
+- Further calls to `.\grover_prototype.ps1` will only cause the quantum part to execute (with the already generated data in MongoDB)
 - `.\clean.ps1` removes everything (the file `init`, downloaded repos, docker container as well as the database in the Windows file system).
 
 ## Misc

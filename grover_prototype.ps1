@@ -20,7 +20,7 @@ if($?)
     # Run docker-compose to create and start MongoDB container
     cd $root\dlgrover\dataImport
     docker-compose up -d
-    # Wait until MondoDB is up and running (py.exe = Python launcher for Windows)
+    # Wait until MongoDB is up and running (py.exe = Python launcher for Windows)
     cd $root
     py WaitForMongo.py
     # Populate database (py.exe = Python launcher for Windows)
@@ -32,7 +32,7 @@ else
     # Container should already be there, just re-start it
     cd $root\dlgrover\dataImport
     docker-compose start
-    # Wait until MondoDB is up and running (py.exe = Python launcher for Windows)
+    # Wait until MongoDB is up and running (py.exe = Python launcher for Windows)
     cd $root
     py WaitForMongo.py
 }
@@ -44,7 +44,7 @@ conda activate qsharp-env
 
 # Call host script for quantum computation with the Python interpreter from qusharp-env
 cd $root\dlgrover\grover\src
-Python service.py
+python service.py
 
 # Deactivate the environment
 conda deactivate
