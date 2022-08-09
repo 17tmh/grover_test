@@ -1,4 +1,12 @@
-$root = $PSScriptRoot
+if($PSScriptRoot -eq "")
+{
+    $root = $pwd
+}
+else
+{
+    $root = $PSScriptRoot
+}
+
 echo "Project home directory = $root"
 
 # Enable anaconda installation for this session
