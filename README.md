@@ -38,4 +38,4 @@ python -c "import qsharp"
 
 ## TODO
 
-- Automate the manual part in `Container.json`
+- Automate the manual adjustments in `Container.json`
