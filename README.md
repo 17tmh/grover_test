@@ -22,18 +22,20 @@ python -c "import qsharp"
 ## Run
 
 - Before first run: Make sure there will be no conflicts with already existing docker containers.
+- Perform the following sequence in Powershell:
+- Run `git clone https://github.com/17tmh/grover_test.git; cd grover_test`
+- Run `.\init_1.ps`
+- Open `grover_test\data-generator\datasets\smart-factory0_05\Container.json`
+- Manually change the values of `light` so that ...
+  - ... each value occurs only once (unique).
+  - ... the value `7` is used (this is the value that is searched for!)
+- Run `.\init_2.ps`
+- Run `.\run_grover.ps1` to perform the quantum search (you may repeat that step as many times as you like)
+  - To perform the quantum search multiple times in a run:
+    - Open `grover_test\dlgrover\grover\src\config.py`
+    - Change `nExperiements = 1`
+- Run `.\clean.ps1` to remove everything (downloaded repos, docker container)
 
-```
-git clone https://github.com/17tmh/grover_test.git
-cd grover_test
-.\grover_prototype.ps1
-```
+## TODO
 
-- Since there is no file `init`, the initialization will run first (download repos, generate data and populate MongoDB)
-- Further calls to `.\grover_prototype.ps1` will only cause the quantum part to execute (with the already generated data in MongoDB)
-- `.\clean.ps1` removes everything (the file `init`, downloaded repos, docker container as well as the database in the Windows file system).
-
-## Misc
-
-- Alternative to docker-compose file:
-  - `docker run --rm -d -p 27018:27017 -e MONGO_INITDB_ROOT_USERNAME=user -e MONGO_INITDB_ROOT_PASSWORD=user mongo:5.0.6-focal`
+- Automate the manual part in `Container.json`
