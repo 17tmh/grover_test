@@ -23,7 +23,7 @@ python -c "import qsharp"
 
 - Before first run: Make sure there will be no conflicts with already existing docker containers.
 - Perform the following sequence in Powershell:
-- Run `git clone https://github.com/17tmh/grover_test.git; cd grover_test`
+- Clone this repo: `git clone https://github.com/17tmh/grover_test.git; cd grover_test`
 - Run `.\init_1.ps`
 - Open `grover_test\data-generator\datasets\smart-factory0_05\Container.json`
 - Manually change the values of `light` so that ...
