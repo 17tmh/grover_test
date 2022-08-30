@@ -16,5 +16,4 @@ while(True):
     except:
         print("Error: Could not reach server!")
 
-print("\nClosing...")
-time.sleep(1.)
+time.sleep(0.5)
