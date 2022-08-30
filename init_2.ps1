@@ -1,16 +1,16 @@
 $root = $PSScriptRoot
-echo "Project home directory = $root"
+Write-Output "Project home directory = $root"
 
 # Populate database
-cd $root\dlgrover\dataImport
+Set-Location $root\dlgrover\dataImport
 python dataStoreWrapper.py
 
 # Stop the container
-cd $root\dlgrover\dataImport
+Set-Location $root\dlgrover\dataImport
 docker-compose stop
 
 # Go back home
-cd $root
+Set-Location $root
 
 # Deactivate the environment
 conda deactivate

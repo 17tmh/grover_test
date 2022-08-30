@@ -1,5 +1,5 @@
 $root = $PSScriptRoot
-echo "Project home directory = $root"
+Write-Output "Project home directory = $root"
 
 # Enable anaconda installation for this session
 & ~\anaconda3\shell\condabin\conda-hook.ps1
@@ -7,23 +7,23 @@ echo "Project home directory = $root"
 conda activate qsharp-env
 
 # Container should already be there, just re-start it
-cd $root\dlgrover\dataImport
+Set-Location $root\dlgrover\dataImport
 docker-compose start
 
 # Wait until MongoDB is up and running (could take some time)
-cd $root
+Set-Location $root
 python WaitForMongo.py
 
 # Call host script for quantum computation
-cd $root\dlgrover\grover\src
+Set-Location $root\dlgrover\grover\src
 python service.py
 
 # Stop the container
-cd $root\dlgrover\dataImport
+Set-Location $root\dlgrover\dataImport
 docker-compose stop
 
 # Go back home
-cd $root
+Set-Location $root
 
 # Deactivate the environment
 conda deactivate
