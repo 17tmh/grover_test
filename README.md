@@ -39,3 +39,17 @@ python -c "import qsharp"
 ## TODO
 
 - Automate the manual adjustments in `Container.json`
+
+## Erläuterungen zum Ablauf
+
+1. Anaconda-Umgebung `qsharp-env` wird geladen.
+2. Repo `dlgrover.git` wird geladen
+3. MongoDB wird in Docker gestartet. Waren bis MongoDB erreichbar ist.
+4. `dataStoreWrapper.py` wird ausgeführt:
+   - Pfade zu diesen Dateien werden etwas kompliziert erzeugt: 
+     - `dlgrover\dataImport\data\Container.json`
+     - `dlgrover\dataImport\data\Order.json`
+     - Daten werden zwei Datenbanken (gleiche MongoDB-Instandz) geladen. Wie das geht, siehe https://pymongo.readthedocs.io/en/stable/tutorial.html
+     - Wichtig: An important note about collections (and databases) in MongoDB is that they are created lazily - none of the above commands have actually performed any operations on the MongoDB server. Collections and databases are created when the first document is inserted into them.
+
+
